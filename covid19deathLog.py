@@ -25,7 +25,7 @@ xl_sheet = wb_obj.sheet_by_index(0)
 date = lambda x: datetime.fromordinal(datetime(1900, 1, 1).toordinal() + int(x.value) - 2)
 dates = list(map(date, xl_sheet.col(0)[1:]))
 countries = list(map(lambda x: x.value.lower(), xl_sheet.col(1)[1:]))
-counts = list(map(lambda x: x.value, xl_sheet.col(2)[1:])) # Column 2 cases, Column 3 deaths Rainer Winkler
+counts = list(map(lambda x: x.value, xl_sheet.col(3)[1:])) # Column 2 cases, Column 3 deaths Rainer Winkler
 
 data = {}
 for date, count, country in reversed(list(zip(dates, counts, countries))):
@@ -58,9 +58,9 @@ for region in regions:
 end_date = data[regions[0]]["dates"][-1].date()
 plt.legend(regions)
 plt.ylabel("Number of confirmed cases")
-plt.title("Confirmed cases per country as of " + str(end_date))
+plt.title("Confirmed deaths per country as of " + str(end_date))
 ax.set_xlim([datetime(2020, 2, 15),end_date]) #Rainer Winkler
 plt.grid() #Rainer Winkler
-plt.savefig("./plotCount.png")
+plt.savefig("./plotDeath.png") #Rainer Winkler
 plt.show()
 
