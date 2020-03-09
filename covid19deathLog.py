@@ -14,8 +14,18 @@ url = "https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases"
 
 page = requests.get(url)
 soup = BeautifulSoup(page.text, "html.parser")
-xls_link_box = soup.find(text="Download today's data: Geographic distribution of COVID-19 cases worldwide - XLS file")
-xls_url = xls_link_box.parent["href"]
+
+# Changed method to find Excel file URL
+xls_url = ""
+for link in soup.find_all('a'):
+    url2 = link.get('href')
+    if type(url2) == str:
+        if url2.find(".xls") != -1:
+            if xls_url == "":
+                xls_url = url2
+
+#xls_link_box = soup.find(text="Download today's data: Geographic distribution of COVID-19 cases worldwide - XLS file")
+#xls_url = xls_link_box.parent["href"]
 
 
 urllib.request.urlretrieve(xls_url, './covid_count.xls')
