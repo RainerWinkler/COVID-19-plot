@@ -14,32 +14,42 @@ import sys
 column = 2 # This is the column for cases
 column_text = "cases"
 regions = [] # The list of regions to 
+filename = ""
+dark = ""
 # Evaluate arguments
 arguments = sys.argv[1:]
 for arg in arguments:
     if ( arg == "-deaths" ) : 
         column = 3 # This is the columns for deaths
         column_text = "deaths"
+    elif ( arg == "-out" ) :
+        filename = "xxx"
+    elif ( arg == "-dark" ) :
+        dark = "X"
     else:
-        regions.append(arg)
+        if filename == "xxx":
+            filename = arg
+        else:
+            regions.append(arg)
 
 
 url = "https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases"
 
 page = requests.get(url)
 soup = BeautifulSoup(page.text, "html.parser")
+# Changed method to find Excel file URL
 xls_url = ""
 for link in soup.find_all('a'):
     url2 = link.get('href')
-    print(url2)
+    #print(url2)
     if type(url2) == str:
         position = url2.find(".xls")
-        print(str(position))
+        #print(str(position))
         if url2.find(".xls") != -1:
             if xls_url == "":
                 xls_url = url2
-                print("found" + xls_url)
-print(xls_url)
+                #print("found" + xls_url)
+#print(xls_url)
 #xls_link_box = soup.find(text="Download today's data: Geographic distribution of COVID-19 cases worldwide - XLS file")
 #xls_link_box = soup.find(text="ct__link")
 #xls_url = xls_link_box.parent["href"]
@@ -89,6 +99,8 @@ plt.ylabel("Number of confirmed " + column_text)
 plt.title("Confirmed " + column_text + " per country as of " + str(end_date))
 ax.set_xlim([datetime(2020, 2, 15),end_date]) #Rainer Winkler
 plt.grid() #Rainer Winkler
-plt.savefig("./plotDeath.png") #Rainer Winkler
-plt.show()
+if filename != "" :
+    plt.savefig("./" + filename + ".png") #Rainer Winkler
+if dark == "" :
+    plt.show()
 
