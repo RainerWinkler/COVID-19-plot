@@ -1,12 +1,18 @@
+This is a modified copy of the repository https://github.com/karvla/covid19count
+
 # covid19count
 Plots number of confirmed COVID-19 cases for countries worldwide. The data is pulled from 	
 [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases).
-![example](../../raw/master/example.png)
-![example](../../raw/master/plotCount.png)
-![example](../../raw/master/plotDeath.png)
+
+![example](../../raw/master/middle_europe_count.png)
+![example](../../raw/master/middle_europe_deaths.png)
 
 ## Usage
-Run with `python3 covid19count.py nameofcountry1 nameofcountry2 ...` or `python covid19count.py nameofcountry1 nameofcountry2 ...`. 
-Use covid19countLog.py for a logarithmic plot of cases, covid19deathLog.py for a logarithmic plot of deaths. In both cases the date starts mid of February, adapt the coding to change this. 
+Calculate all plots with `python make_plots.py`
 
+To make individual plots about cases use `python covid19plot.py france germany austria`
+To plot deaths add -deaths for instance `python covid19plot.py -deaths france spain`
+
+To save to file add -out filename for instance `python covid19plot.py france germany austria -out middle_europe_count`
+To save to file without displaying a plot add -dark for instance `python covid19plot.py france germany austria -out middle_europe_count -dark`
 
