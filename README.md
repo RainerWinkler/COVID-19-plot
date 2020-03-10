@@ -20,6 +20,9 @@ To plot with logarithmic y axis add -log: `python covid19plot.py -log france ger
 Country names are in lowercase and have to be like in the read Excel file.
 To plot deaths add -deaths for instance `python covid19plot.py -deaths france spain`
 
+To use symbols user -format and provide a list of format options: `python covid19plot.py -log austria germany france -format "ro gs bd" -deaths`
+Use the format options from Matlab (As they are used by Matplotlib.
+
 To save to file add -out filename for instance `python covid19plot.py france germany austria -out middle_europe_count`
 To save to file without displaying a plot add -dark for instance `python covid19plot.py france germany austria -out middle_europe_count -dark`
 
