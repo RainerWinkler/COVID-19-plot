@@ -104,7 +104,10 @@ ax.xaxis.set_major_formatter(date_form) #Rainer Winkler
 index = 0
 for region in regions:
      #plt.semilogy(data[region]["dates"], np.cumsum(data[region]["counts"]))
-     plt.plot(data[region]["dates"], np.cumsum(data[region]["counts"]), formats[index])
+     if format != "":
+         plt.plot(data[region]["dates"], np.cumsum(data[region]["counts"]), formats[index])
+     else:
+         plt.plot(data[region]["dates"], np.cumsum(data[region]["counts"]))
      index = index + 1
 if log == "X":
     plt.yscale("log")
