@@ -16,6 +16,7 @@ column_text = "cases"
 regions = [] # The list of regions to 
 filename = ""
 dark = ""
+log = ""
 # Evaluate arguments
 arguments = sys.argv[1:]
 for arg in arguments:
@@ -26,6 +27,8 @@ for arg in arguments:
         filename = "xxx"
     elif ( arg == "-dark" ) :
         dark = "X"
+    elif ( arg == "-log" ):
+        log = "X"
     else:
         if filename == "xxx":
             filename = arg
@@ -91,9 +94,10 @@ ax.xaxis.set_major_formatter(date_form) #Rainer Winkler
 #for region in regions:
 #    plt.bar(data[region]["dates"], np.cumsum(data[region]["counts"]), alpha=0.6)
 for region in regions:
-     plt.semilogy(data[region]["dates"], np.cumsum(data[region]["counts"]))
-     #plt.plot(data[region]["dates"], np.cumsum(data[region]["counts"]))
-
+     #plt.semilogy(data[region]["dates"], np.cumsum(data[region]["counts"]))
+     plt.plot(data[region]["dates"], np.cumsum(data[region]["counts"]))
+if log == "X":
+    plt.yscale("log")
 end_date = data[regions[0]]["dates"][-1].date()
 plt.legend(regions)
 plt.ylabel("Number of confirmed " + column_text)
