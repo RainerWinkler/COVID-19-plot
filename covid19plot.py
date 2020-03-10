@@ -7,8 +7,10 @@ from bs4 import BeautifulSoup
 import requests
 import urllib.request
 from datetime import datetime
+from datetime import timedelta 
 import numpy as np
 import sys
+
 
 # Defaults
 column = 2 # This is the column for cases
@@ -17,6 +19,7 @@ regions = [] # The list of regions to
 filename = ""
 dark = ""
 log = ""
+format = ""
 # Evaluate arguments
 arguments = sys.argv[1:]
 for arg in arguments:
@@ -29,9 +32,14 @@ for arg in arguments:
         dark = "X"
     elif ( arg == "-log" ):
         log = "X"
+    elif ( arg == "-format" ):
+        format = "xxx"
     else:
         if filename == "xxx":
             filename = arg
+        elif format == "xxx":
+            format = arg
+            formats = format.split() # Split at white space
         else:
             regions.append(arg)
 
@@ -93,12 +101,14 @@ date_form = DateFormatter("%m-%d") #Rainer Winkler
 ax.xaxis.set_major_formatter(date_form) #Rainer Winkler
 #for region in regions:
 #    plt.bar(data[region]["dates"], np.cumsum(data[region]["counts"]), alpha=0.6)
+index = 0
 for region in regions:
      #plt.semilogy(data[region]["dates"], np.cumsum(data[region]["counts"]))
-     plt.plot(data[region]["dates"], np.cumsum(data[region]["counts"]))
+     plt.plot(data[region]["dates"], np.cumsum(data[region]["counts"]), formats[index])
+     index = index + 1
 if log == "X":
     plt.yscale("log")
-end_date = data[regions[0]]["dates"][-1].date()
+end_date = data[regions[0]]["dates"][-1].date() + timedelta(days=1)
 plt.legend(regions)
 plt.ylabel("Number of confirmed " + column_text)
 plt.title("Confirmed " + column_text + " per country as of " + str(end_date))
