@@ -33,7 +33,8 @@ for arg in arguments:
             regions.append(arg)
 
 
-url = "https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases"
+#url = "https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases"
+url = "https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide"
 
 page = requests.get(url)
 soup = BeautifulSoup(page.text, "html.parser")
