@@ -16,6 +16,7 @@ You may delete the cache for images in the browser when the plots are not actual
 Calculate all plots with `python make_plots.py`
 
 To make individual plots about cases use `python covid19plot.py france germany austria`
+To plot with logarithmic y axis add -log: `python covid19plot.py -log france germany austria`
 Country names are in lowercase and have to be like in the read Excel file.
 To plot deaths add -deaths for instance `python covid19plot.py -deaths france spain`
 
