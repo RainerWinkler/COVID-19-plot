@@ -111,11 +111,12 @@ for region in regions:
      index = index + 1
 if log == "X":
     plt.yscale("log")
-end_date = data[regions[0]]["dates"][-1].date() + timedelta(days=1)
+end_date = data[regions[0]]["dates"][-1].date()
+end_date_plot = end_date + timedelta(days=1)
 plt.legend(regions)
 plt.ylabel("Number of confirmed " + column_text)
 plt.title("Confirmed " + column_text + " per country as of " + str(end_date))
-ax.set_xlim([datetime(2020, 2, 15),end_date]) #Rainer Winkler
+ax.set_xlim([datetime(2020, 2, 15),end_date_plot]) #Rainer Winkler
 plt.grid() #Rainer Winkler
 if filename != "" :
     plt.savefig("./" + filename + ".png") #Rainer Winkler
