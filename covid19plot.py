@@ -73,7 +73,7 @@ xl_sheet = wb_obj.sheet_by_index(0)
 
 date = lambda x: datetime.fromordinal(datetime(1900, 1, 1).toordinal() + int(x.value) - 2)
 dates = list(map(date, xl_sheet.col(0)[1:]))
-countries = list(map(lambda x: x.value.lower(), xl_sheet.col(1)[1:]))
+countries = list(map(lambda x: x.value, xl_sheet.col(1)[1:]))
 counts = list(map(lambda x: x.value, xl_sheet.col(column)[1:])) # Column 2 cases, Column 3 deaths Rainer Winkler
 
 data = {}
