@@ -51,3 +51,5 @@ To save to file without displaying a plot add -dark for instance `python covid19
 
 To display per 100,000 inhabitants add -perCapita
 
+To display tops add -to from to. Countries are ignored. San Marino and Diamond Princes have very many values and are suppressed
+
