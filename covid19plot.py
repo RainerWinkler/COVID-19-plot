@@ -38,7 +38,6 @@ for arg in arguments:
         format = "xxx"
     elif ( arg == "-perCapita" ):
         perCapita = "X"
-        print('per Capita')
     else:
         if filename == "xxx":
             filename = arg
@@ -136,11 +135,14 @@ if log == "X":
 end_date = data[regions[0]]["dates"][-1].date()
 end_date_plot = end_date + timedelta(days=1)
 plt.legend(legendText)
-if perCapita == "X":
+if perCapita == "":
     plt.ylabel("Number of confirmed " + column_text)
 else:
     plt.ylabel("Number of confirmed " + column_text + "per 100,000 inhabitants" )
-plt.title("Confirmed " + column_text + " per country as of " + str(end_date))
+if perCapita == "":
+    plt.title("Confirmed " + column_text + " per country as of " + str(end_date))
+else:
+    plt.title("Confirmed " + column_text + " per country per 100,000 inhabitants as of " + str(end_date))
 ax.set_xlim([datetime(2020, 2, 15),end_date_plot]) #Rainer Winkler
 plt.grid() #Rainer Winkler
 if filename != "" :
