@@ -6,6 +6,13 @@ Plots number of confirmed COVID-19 cases for countries worldwide. The data is pu
 
 You may delete the cache for images in the browser when the plots are not actual.
 
+![example](../../raw/master/top_10.png)
+![example](../../raw/master/top_10_deaths .png)
+![example](../../raw/master/top_20.png)
+![example](../../raw/master/top_20_deaths .png)
+![example](../../raw/master/top_30.png)
+![example](../../raw/master/top_30_deaths .png)
+
 ![example](../../raw/master/special_1_count.png)
 ![example](../../raw/master/special_1_deaths.png)
 

@@ -113,7 +113,15 @@ for date, count, country in reversed(list(zip(dates, counts, countries))):
         data[country] = {"dates" : [date], "counts" : [count]}
     else:
         data[country]["dates"].append(date)
-        allRegions.append(country)
+        dummy = 0
+        if country == 'JPG11668':
+            #Ignore Cruise Ship
+            dummy = 1
+        elif country == 'SM':
+            #Ignore San Marino, assume it to be cared for by Italy
+            dummy = 2
+        else:
+            allRegions.append(country)
         if perCapita == "":
             data[country]["counts"].append(count)
         else:
