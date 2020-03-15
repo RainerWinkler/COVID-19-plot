@@ -38,6 +38,7 @@ for arg in arguments:
         format = "xxx"
     elif ( arg == "-perCapita" ):
         perCapita = "X"
+        print('per Capita')
     else:
         if filename == "xxx":
             filename = arg
@@ -97,7 +98,10 @@ for date, count, country in reversed(list(zip(dates, counts, countries))):
         data[country] = {"dates" : [date], "counts" : [count]}
     else:
         data[country]["dates"].append(date)
-        data[country]["counts"].append(count)
+        if perCapita == "":
+            data[country]["counts"].append(count)
+        else:
+            data[country]["counts"].append(count*100000/float(population[country]))
 
 
 # Sort by last value descending. This helps people with restricted color vision to associate the legend to the lines
@@ -132,7 +136,10 @@ if log == "X":
 end_date = data[regions[0]]["dates"][-1].date()
 end_date_plot = end_date + timedelta(days=1)
 plt.legend(legendText)
-plt.ylabel("Number of confirmed " + column_text)
+if perCapita == "X":
+    plt.ylabel("Number of confirmed " + column_text)
+else:
+    plt.ylabel("Number of confirmed " + column_text + "per 100,000 inhabitants" )
 plt.title("Confirmed " + column_text + " per country as of " + str(end_date))
 ax.set_xlim([datetime(2020, 2, 15),end_date_plot]) #Rainer Winkler
 plt.grid() #Rainer Winkler

@@ -29,3 +29,5 @@ Use the format options from Matlab (As they are used by Matplotlib.
 To save to file add -out filename for instance `python covid19plot.py FR DE AT -out middle_europe_count`
 To save to file without displaying a plot add -dark for instance `python covid19plot.py FR DE AT -out middle_europe_count -dark`
 
+To display per 100,000 inhabitants add -perCapita
+
