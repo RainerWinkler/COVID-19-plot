@@ -11,6 +11,9 @@ You may delete the cache for images in the browser when the plots are not actual
 ![example](../../raw/master/top_10.png)
 ![example](../../raw/master/top_10_deaths.png)
 
+San Marino is not shown (Assumed to be cared for by Italy)
+Cases on Diamond Princess are not shown (Singular event)
+
 ##Top 20 cases and death
 
 ![example](../../raw/master/top_20.png)
