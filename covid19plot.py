@@ -84,8 +84,9 @@ for date, count, country in reversed(list(zip(dates, counts, countries))):
         data[country]["dates"].append(date)
         data[country]["counts"].append(count)
 
-#regions = sys.argv[1:]
-#regions = sorted(regions, key=lambda r: sum(data[r]["counts"]), reverse=True)
+
+# Sort by last value descending. This helps people with restricted color vision to associate the legend to the lines
+regions = sorted(regions, key=lambda r: sum(data[r]["counts"]), reverse=True)
 
 f = plt.figure(figsize=(7,4))
 ax = f.add_subplot(111)
