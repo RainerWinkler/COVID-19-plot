@@ -18,14 +18,14 @@ You may delete the cache for images in the browser when the plots are not actual
 ## Usage
 Calculate all plots with `python make_plots.py`
 
-To make individual plots about cases use `python covid19plot.py France Germany Austria`
-To plot with logarithmic y axis add -log: `python covid19plot.py -log France Germany Austria`
+To make individual plots about cases use with the international country codes `python covid19plot.py FR DE AT`
+To plot with logarithmic y axis add -log: `python covid19plot.py -log FR DE AT`
 Country names are in lowercase and have to be like in the read Excel file.
-To plot deaths add -deaths for instance `python covid19plot.py -deaths France Spain`
+To plot deaths add -deaths for instance `python covid19plot.py -deaths FR ES`
 
-To use symbols user -format and provide a list of format options: `python covid19plot.py -log Austria Germany France -format "ro gs bd" -deaths`
+To use symbols user -format and provide a list of format options: `python covid19plot.py -log AT DE FR -format "ro gs bd" -deaths`
 Use the format options from Matlab (As they are used by Matplotlib.
 
-To save to file add -out filename for instance `python covid19plot.py France Germany Austria -out middle_europe_count`
-To save to file without displaying a plot add -dark for instance `python covid19plot.py France Germany Austria -out middle_europe_count -dark`
+To save to file add -out filename for instance `python covid19plot.py FR DE AT -out middle_europe_count`
+To save to file without displaying a plot add -dark for instance `python covid19plot.py FR DE AT -out middle_europe_count -dark`
 

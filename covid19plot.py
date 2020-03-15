@@ -10,6 +10,7 @@ from datetime import datetime
 from datetime import timedelta 
 import numpy as np
 import sys
+import csv
 
 
 # Defaults
@@ -20,6 +21,7 @@ filename = ""
 dark = ""
 log = ""
 format = ""
+perCapita = ""
 # Evaluate arguments
 arguments = sys.argv[1:]
 for arg in arguments:
@@ -34,6 +36,8 @@ for arg in arguments:
         log = "X"
     elif ( arg == "-format" ):
         format = "xxx"
+    elif ( arg == "-perCapita" ):
+        perCapita = "X"
     else:
         if filename == "xxx":
             filename = arg
@@ -71,10 +75,21 @@ urllib.request.urlretrieve(xls_url, './covid_count.xls')
 wb_obj = xlrd.open_workbook('./covid_count.xls') 
 xl_sheet = wb_obj.sheet_by_index(0)
 
+population = dict()
+countryText = dict()
+with open('CountriesPopulation.csv', newline='') as f:
+    reader = csv.reader(f)
+    for row in reader:
+        population[row[1]] = row[2]
+        countryText[row[1]] = row[0]
+
 date = lambda x: datetime.fromordinal(datetime(1900, 1, 1).toordinal() + int(x.value) - 2)
 dates = list(map(date, xl_sheet.col(0)[1:]))
-countries = list(map(lambda x: x.value, xl_sheet.col(1)[1:]))
+countries = list(map(lambda x: x.value, xl_sheet.col(4)[1:])) # Column with Country Code
 counts = list(map(lambda x: x.value, xl_sheet.col(column)[1:])) # Column 2 cases, Column 3 deaths Rainer Winkler
+
+#countries = list(xl_sheet.col(4)[1:], xl_sheet.col(1)[1:])
+#counts = list(xl_sheet.col(4)[1:], xl_sheet.col(column)[1:]) # Column 2 cases, Column 3 deaths Rainer Winkler
 
 data = {}
 for date, count, country in reversed(list(zip(dates, counts, countries))):
@@ -103,8 +118,10 @@ ax.xaxis.set_major_formatter(date_form) #Rainer Winkler
 #for region in regions:
 #    plt.bar(data[region]["dates"], np.cumsum(data[region]["counts"]), alpha=0.6)
 index = 0
+legendText = []
 for region in regions:
      #plt.semilogy(data[region]["dates"], np.cumsum(data[region]["counts"]))
+     legendText.append( countryText[region] );
      if format != "":
          plt.plot(data[region]["dates"], np.cumsum(data[region]["counts"]), formats[index])
      else:
@@ -114,7 +131,7 @@ if log == "X":
     plt.yscale("log")
 end_date = data[regions[0]]["dates"][-1].date()
 end_date_plot = end_date + timedelta(days=1)
-plt.legend(regions)
+plt.legend(legendText)
 plt.ylabel("Number of confirmed " + column_text)
 plt.title("Confirmed " + column_text + " per country as of " + str(end_date))
 ax.set_xlim([datetime(2020, 2, 15),end_date_plot]) #Rainer Winkler
