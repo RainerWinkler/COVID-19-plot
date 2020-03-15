@@ -51,7 +51,7 @@ for arg in arguments:
         elif format == "xxx":
             format = arg
             formats = format.split() # Split at white space
-        if topToSearch == "X":
+        elif topToSearch == "X":
             if topFromFound == "":
                 topFrom = int(arg)
                 topFromFound = "X"
