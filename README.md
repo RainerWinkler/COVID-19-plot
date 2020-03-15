@@ -24,7 +24,7 @@ Cases on Diamond Princess are not shown (Singular event)
 ![example](../../raw/master/top_30.png)
 ![example](../../raw/master/top_30_deaths.png)
 
-##Further examples
+## Further examples
 
 ![example](../../raw/master/special_1_count.png)
 ![example](../../raw/master/special_1_deaths.png)
