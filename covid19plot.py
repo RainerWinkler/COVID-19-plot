@@ -22,6 +22,10 @@ dark = ""
 log = ""
 format = ""
 perCapita = ""
+top = ""
+topToSearch = ""
+topFromFound = ""
+topToFound = ""
 # Evaluate arguments
 arguments = sys.argv[1:]
 for arg in arguments:
@@ -38,12 +42,23 @@ for arg in arguments:
         format = "xxx"
     elif ( arg == "-perCapita" ):
         perCapita = "X"
+    elif ( arg == "-top" ):
+        top = "X"
+        topToSearch = "X"
     else:
         if filename == "xxx":
             filename = arg
         elif format == "xxx":
             format = arg
             formats = format.split() # Split at white space
+        if topToSearch == "X":
+            if topFromFound == "":
+                topFrom = int(arg)
+                topFromFound = "X"
+            elif topFromFound == "X":
+                topTo = int(arg)
+                topToFound = "X"
+                topToSearch = ""
         else:
             regions.append(arg)
 
@@ -77,6 +92,7 @@ xl_sheet = wb_obj.sheet_by_index(0)
 
 population = dict()
 countryText = dict()
+allRegions = []
 with open('CountriesPopulation.csv', newline='') as f:
     reader = csv.reader(f)
     for row in reader:
@@ -97,14 +113,22 @@ for date, count, country in reversed(list(zip(dates, counts, countries))):
         data[country] = {"dates" : [date], "counts" : [count]}
     else:
         data[country]["dates"].append(date)
+        allRegions.append(country)
         if perCapita == "":
             data[country]["counts"].append(count)
         else:
             data[country]["counts"].append(count*100000/float(population[country]))
 
+# Remove duplicates
+allRegions = list( dict.fromkeys(allRegions) )
+            
+if top == "X":
+    regions = allRegions
 
 # Sort by last value descending. This helps people with restricted color vision to associate the legend to the lines
 regions = sorted(regions, key=lambda r: sum(data[r]["counts"]), reverse=True)
+if top == "X":
+    regions = regions[topFrom-1:topTo-1]
 
 f = plt.figure(figsize=(6.4*1.5,4.8*1.5))
 ax = f.add_subplot(111)
