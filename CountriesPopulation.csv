@@ -1,0 +1,198 @@
+Country,Country Code,Population
+China,CN,1401768800
+India,IN,1359812346
+United States of America,US,329453849
+Indonesia,ID,266911900
+Pakistan,PK,218950520
+Brazil,BR,211257279
+Nigeria,NG,206139587
+Bangladesh,BD,168270652
+Russia,RU,146745098
+Mexico,MX,126577691
+Japan,JP,126010000
+Philippines,PH,108407287
+Egypt,EG,100131097
+Ethiopia,ET,98665000
+Vietnam,VN,96208984
+Democratic Republic of the Congo,CD,89561404
+Iran,IR,83281956
+Turkey,TR,83154997
+Germany,DE,83149300
+France,FR,67064000
+Thailand,TH,66481630
+United Kingdom,UK,66435600
+Italy,IT,60243406
+South Africa,ZA,58775022
+Tanzania,TZ,55890747
+Myanmar,MM,54339766
+South Korea,KR,51780579
+Colombia,CO,49395678
+Kenya,KE,47564296
+Spain,ES,47100396
+Argentina,AR,44938712
+Algeria,DZ,43000000
+Sudan,SD,42345710
+Ukraine,UA,41902416
+Uganda,UG,40299300
+Iraq,IQ,39127900
+Poland,PL,38386000
+Canada,CA,37958039
+Morocco,MA,35839345
+Saudi Arabia,SA,34218169
+Uzbekistan,UZ,34070275
+Malaysia,MY,32719760
+Afghanistan,AF,32225560
+Venezuela,VE,32219521
+Peru,PE,32131400
+Angola,AO,31127674
+Ghana,GH,30280811
+Mozambique,MZ,30066648
+Yemen,YE,29825968
+Nepal,NP,29609623
+Cameroon,CM,26545864
+Cote dIvoire,CI,25823071
+Madagascar,MG,25680342
+Australia,AU,25646823
+North Korea,KP,25450000
+Taiwan,TW,23604265
+Niger,NE,22314743
+Sri Lanka,LK,21803000
+Burkina Faso,BF,20870060
+Mali,ML,19973000
+Romania,RO,19405156
+Chile,CL,19107216
+Kazakhstan,KZ,18663384
+Malawi,MW,17563749
+Syria,SY,17500657
+Netherlands,NL,17444731
+Ecuador,EC,17444556
+Zambia,ZM,17381168
+Guatemala,GT,16604026
+Senegal,SN,16209125
+Somalia,SO,15893219
+Chad,TD,15692969
+Cambodia,KH,15288489
+Zimbabwe,ZW,15159624
+South Sudan,SS,12778250
+Rwanda,RW,12374397
+Guinea,GN,12218357
+Benin,BJ,11733059
+Tunisia,TN,11722038
+Haiti,HT,11577779
+Belgium,BE,11524454
+Bolivia,BO,11469896
+Cuba,CU,11209628
+Burundi,BI,10953317
+Greece,EL,10724599
+Czech Republic,CZ,10681161
+Jordan,JO,10636364
+Dominican Republic,DO,10358320
+Sweden,SE,10333456
+Portugal,PT,10276617
+Azerbaijan,AZ,10067108
+United Arab Emirates,AE,9890400
+Hungary,HU,9772756
+Belarus,BY,9413446
+Israel,IL,9171900
+Honduras,HN,9158345
+Tajikistan,TJ,9127000
+Papua New Guinea,PG,8935000
+Austria,AT,8902600
+Switzerland,CH,8586550
+Sierra Leone,SL,7901454
+Togo,TG,7538000
+Hong Kong (China) ,HK,7500700
+Paraguay,PY,7152703
+Laos,LA,7123205
+Bulgaria,BG,7000039
+Serbia,RS,6963764
+Libya,LY,6871287
+Lebanon,LB,6825442
+Kyrgyzstan,KG,6523500
+El Salvador,SV,6486201
+Nicaragua,NI,6460411
+Turkmenistan,TM,6031187
+Denmark,DK,5822763
+Singapore,SG,5703600
+Finland,FI,5527573
+Congo,CG,5518092
+Central African Republic,CF,5496011
+Slovakia,SK,5456362
+Norway,NO,5367580
+Costa Rica,CR,5058007
+Palestine,PS,4976684
+New Zealand,NZ,4970447
+Ireland,IE,4921500
+Oman,OM,4664790
+Liberia,LR,4475353
+Kuwait,KW,4420110
+Panama,PA,4218808
+Mauritania,MR,4077347
+Croatia,HR,4076246
+Georgia,GE,3723464
+Uruguay,UY,3518552
+Eritrea,ER,3497117
+Mongolia,MN,3307640
+Bosnia and Herzegovina,BA,3301000
+Armenia,AM,2957500
+Albania,AL,2862427
+Lithuania,LT,2793350
+Qatar,QA,2747282
+Jamaica,JM,2726667
+Moldova,MD,2681735
+Namibia,NA,2458936
+Gambia,GM,2347706
+Botswana,BW,2338851
+Gabon,GA,2172579
+Slovenia,SI,2094060
+North Macedonia,MK,2077132
+Lesotho,LS,2007201
+Latvia,LV,1906800
+Guinea-Bissau,GW,1604528
+Bahrain,BH,1543300
+East Timor,TL,1387149
+Trinidad and Tobago,TT,1363985
+Equatorial Guinea,GQ,1358276
+Estonia,EE,1328360
+Mauritius,MU,1265985
+Swaziland,SZ,1093238
+Djibouti,DJ,1078373
+Fiji,FJ,884887
+Cyprus,CY,875900
+Comoros,KM,873724
+Guyana,GY,782766
+Bhutan,BT,741672
+Solomon Islands,SB,680806
+Montenegro,ME,622359
+Luxembourg,LU,613894
+Suriname,SR,581372
+Malta,MT,493559
+Brunei Darussalam,BN,442400
+Belize,BZ,408487
+Bahamas,BS,385340
+Maldives,MV,374775
+Iceland,IS,364260
+Vanuatu,VU,304500
+Barbados,BB,287025
+São Tomé and Príncipe,ST,201784
+Samoa,WS,200874
+Saint Lucia,LC,178696
+Kiribati,KI,120100
+Grenada,GD,112003
+Saint Vincent and the Grenadines,VC,110608
+F.S. Micronesia,FM,104468
+Tonga,TO,100651
+Seychelles,SC,97625
+Antigua and Barbuda,AG,96453
+Andorra,AD,77543
+Dominica,DM,71808
+Marshall Islands,MH,55500
+Saint Kitts and Nevis,KN,52823
+Liechtenstein,LI,38557
+Monaco,MC,38300
+San Marino,SM,33574
+Palau,PW,17900
+Nauru,NR,11000
+Tuvalu,TV,10200
+Cases on an international conveyance Japan,JPG11668,3618
+Holy See,VA,799
