@@ -126,6 +126,9 @@ for date, count, country in reversed(list(zip(dates, counts, countries))):
         elif country == 'SM':
             #Ignore San Marino, assume it to be cared for by Italy
             dummy = 2
+        elif country == 'VA':
+            #Ignore Holy See, assume it to be cared for by Italy
+            dummy = 3
         else:
             allRegions.append(country)
         if perCapita == "":
