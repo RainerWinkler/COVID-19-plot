@@ -110,7 +110,13 @@ counts = list(map(lambda x: x.value, xl_sheet.col(column)[1:])) # Column 2 cases
 data = {}
 for date, count, country in reversed(list(zip(dates, counts, countries))):
     if country not in data:
-        data[country] = {"dates" : [date], "counts" : [count]}
+        if perCapita == "":
+            data[country] = {"dates" : [date], "counts" : [count]}
+        else:
+            perCapitaValue = 0.
+            if count != "":
+                perCapitaValue = int(count) * 100000/float(population[country]) # First time case per country is calculated
+            data[country] = {"dates" : [date], "counts" : [perCapitaValue]}
     else:
         data[country]["dates"].append(date)
         dummy = 0
@@ -125,7 +131,7 @@ for date, count, country in reversed(list(zip(dates, counts, countries))):
         if perCapita == "":
             data[country]["counts"].append(count)
         else:
-            data[country]["counts"].append(count*100000/float(population[country]))
+            data[country]["counts"].append(count*100000/float(population[country])) # Second time case per country is calculated
 
 # Remove duplicates
 allRegions = list( dict.fromkeys(allRegions) )
