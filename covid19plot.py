@@ -12,9 +12,14 @@ import numpy as np
 import sys
 import csv
 
+# Constants
+countryTextColumn = 6 # was 1
+casesColumn = 4 # was 2
+deathColumn = 5 # was 3
+countryIDColumn = 7 # was 4
 
 # Defaults
-column = 2 # This is the column for cases
+column = casesColumn # This is the column for cases
 column_text = "cases"
 regions = [] # The list of regions to 
 filename = ""
@@ -30,7 +35,7 @@ topToFound = ""
 arguments = sys.argv[1:]
 for arg in arguments:
     if ( arg == "-deaths" ) : 
-        column = 3 # This is the columns for deaths
+        column = deathColumn # This is the columns for deaths
         column_text = "deaths"
     elif ( arg == "-out" ) :
         filename = "xxx"
@@ -101,7 +106,7 @@ with open('CountriesPopulation.csv', newline='') as f:
 
 date = lambda x: datetime.fromordinal(datetime(1900, 1, 1).toordinal() + int(x.value) - 2)
 dates = list(map(date, xl_sheet.col(0)[1:]))
-countries = list(map(lambda x: x.value, xl_sheet.col(4)[1:])) # Column with Country Code
+countries = list(map(lambda x: x.value, xl_sheet.col(countryIDColumn)[1:])) # Column with Country Code
 counts = list(map(lambda x: x.value, xl_sheet.col(column)[1:])) # Column 2 cases, Column 3 deaths Rainer Winkler
 
 #countries = list(xl_sheet.col(4)[1:], xl_sheet.col(1)[1:])
