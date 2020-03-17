@@ -24,6 +24,11 @@ Cases on Diamond Princess are not shown (Singular event)
 ![example](../../raw/master/top_30.png)
 ![example](../../raw/master/top_30_deaths.png)
 
+## Top 40 cases and death
+
+![example](../../raw/master/top_40.png)
+![example](../../raw/master/top_40_deaths.png)
+
 ## Further examples
 
 ![example](../../raw/master/special_1_count.png)
