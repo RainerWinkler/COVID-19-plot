@@ -8,7 +8,7 @@ You may delete the cache for images in the browser when the plots are not actual
 
 ## Top 10 cases and death
 
-![example](../../raw/master/top_10.png)
+![example](../../raw/master/Top_10_Countries_Cases.png)
 ![example](../../raw/master/top_10_deaths.png)
 
 San Marino is not shown (Assumed to be cared for by Italy)
