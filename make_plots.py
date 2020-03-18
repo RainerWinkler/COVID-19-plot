@@ -7,8 +7,15 @@ os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_20_death
 os.system('python covid19plot.py -perCapita -log -dark  -out top_20 -top 11 20 -title "Top 11-20"')
 os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_30_deaths -top 21 30 -title "Top 21-30"')
 os.system('python covid19plot.py -perCapita -log -dark  -out top_30 -top 21 30 -title "Top 21-30"')
+
 os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_40_deaths -top 31 40 -title "Top 31-40"')
 os.system('python covid19plot.py -perCapita -log -dark  -out top_40 -top 31 40 -title "Top 31-40"')
+
+os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_50_deaths -top 41 50 -title "Top 41-50"')
+os.system('python covid19plot.py -perCapita -log -dark  -out top_50 -top 41 50 -title "Top 41-50"')
+
+os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_60_deaths -top 51 60 -title "Top 51-60"')
+os.system('python covid19plot.py -perCapita -log -dark  -out top_60 -top 51 60 -title "Top 51-60"')
 
 os.system('python covid19plot.py -perCapita -log -dark -deaths -out special_1_deaths US UK IR KR IT')
 os.system('python covid19plot.py -perCapita -log -dark -out special_1_count US UK IR KR IT')

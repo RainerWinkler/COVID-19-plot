@@ -14,20 +14,30 @@ You may delete the cache for images in the browser when the plots are not actual
 San Marino is not shown (Assumed to be cared for by Italy)
 Cases on Diamond Princess are not shown (Singular event)
 
-## Top 20 cases and death
+## Top 11-20 cases and death
 
 ![example](../../raw/master/top_20.png)
 ![example](../../raw/master/top_20_deaths.png)
 
-## Top 30 cases and death
+## Top 21-30 cases and death
 
 ![example](../../raw/master/top_30.png)
 ![example](../../raw/master/top_30_deaths.png)
 
-## Top 40 cases and death
+## Top 31-40 cases and death
 
 ![example](../../raw/master/top_40.png)
 ![example](../../raw/master/top_40_deaths.png)
+
+## Top 41-50 cases and death
+
+![example](../../raw/master/top_50.png)
+![example](../../raw/master/top_50_deaths.png)
+
+## Top 51-60 cases and death
+
+![example](../../raw/master/top_60.png)
+![example](../../raw/master/top_60_deaths.png)
 
 ## Further examples
 
