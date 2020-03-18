@@ -31,6 +31,7 @@ top = ""
 topToSearch = ""
 topFromFound = ""
 topToFound = ""
+supTitle = ""
 # Evaluate arguments
 arguments = sys.argv[1:]
 for arg in arguments:
@@ -50,9 +51,13 @@ for arg in arguments:
     elif ( arg == "-top" ):
         top = "X"
         topToSearch = "X"
+    elif ( arg == "-title" ):
+        supTitle = "xxx"
     else:
         if filename == "xxx":
             filename = arg
+        elif supTitle == "xxx":
+            supTitle = arg
         elif format == "xxx":
             format = arg
             formats = format.split() # Split at white space
@@ -187,8 +192,12 @@ else:
     plt.ylabel("Number of confirmed " + column_text + "per 100,000 inhabitants" )
 if perCapita == "":
     plt.title("Confirmed " + column_text + " per country as of " + str(end_date))
+    if supTitle != "":
+        plt.suptitle(supTitle)
 else:
     plt.title("Confirmed " + column_text + " per country per 100,000 inhabitants as of " + str(end_date))
+    if supTitle != "":
+        plt.suptitle(supTitle)
 ax.set_xlim([datetime(2020, 2, 15),end_date_plot]) #Rainer Winkler
 plt.grid() #Rainer Winkler
 if filename != "" :
