@@ -32,6 +32,8 @@ topToSearch = ""
 topFromFound = ""
 topToFound = ""
 supTitle = ""
+yFrom = ""
+yTo = ""
 # Evaluate arguments
 arguments = sys.argv[1:]
 for arg in arguments:
@@ -53,6 +55,10 @@ for arg in arguments:
         topToSearch = "X"
     elif ( arg == "-title" ):
         supTitle = "xxx"
+    elif ( arg == "-yFrom" ):
+        yFrom = "xxx"
+    elif ( arg == "-yTo" ):
+        yTo = "xxx"
     else:
         if filename == "xxx":
             filename = arg
@@ -69,6 +75,10 @@ for arg in arguments:
                 topTo = int(arg)
                 topToFound = "X"
                 topToSearch = ""
+        elif yFrom == "xxx":
+            yFrom = arg
+        elif yTo == "xxx":
+            yTo = arg
         else:
             regions.append(arg)
 
@@ -199,6 +209,8 @@ else:
     if supTitle != "":
         plt.suptitle(supTitle)
 ax.set_xlim([datetime(2020, 2, 15),end_date_plot]) #Rainer Winkler
+if yFrom != "":
+    ax.set_ylim(float(yFrom),float(yTo))
 plt.grid() #Rainer Winkler
 if filename != "" :
     plt.savefig("./" + filename + ".png") #Rainer Winkler
