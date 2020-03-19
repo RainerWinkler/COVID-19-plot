@@ -39,6 +39,21 @@ Cases on Diamond Princess are not shown (Singular event)
 ![example](../../raw/master/top_60.png)
 ![example](../../raw/master/top_60_deaths.png)
 
+## Top 61-70 cases and death
+
+![example](../../raw/master/top_70.png)
+![example](../../raw/master/top_70_deaths.png)
+
+## Top 71-80 cases and death
+
+![example](../../raw/master/top_80.png)
+![example](../../raw/master/top_80_deaths.png)
+
+## Top 81-90 cases and death
+
+![example](../../raw/master/top_90.png)
+![example](../../raw/master/top_90_deaths.png)
+
 ## Further examples
 
 ![example](../../raw/master/special_1_count.png)
@@ -67,4 +82,6 @@ To save to file without displaying a plot add -dark for instance `python covid19
 To display per 100,000 inhabitants add -perCapita
 
 To display tops add -to from to. Countries are ignored. San Marino and Diamond Princes have very many values and are suppressed
+
+To set the minimal and maximal values for the y axis use -yFrom <low value> -yTo <high value>: for instance: "-yFrom 1e-2 -yTo 1e3"
 

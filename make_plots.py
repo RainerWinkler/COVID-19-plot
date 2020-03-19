@@ -1,21 +1,35 @@
 import os
 
 
-os.system('python covid19plot.py -perCapita -log -dark -deaths -out Top_10_deaths -top 1 10 -title "Top 10 - Countries with most deaths"')
-os.system('python covid19plot.py -perCapita -log -dark  -out Top_10_Countries_Cases -top 1 10 -title "Top 10 - Countries with most cases"')
-os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_20_deaths -top 11 20 -title "Top 11-20"')
-os.system('python covid19plot.py -perCapita -log -dark  -out top_20 -top 11 20 -title "Top 11-20"')
-os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_30_deaths -top 21 30 -title "Top 21-30"')
-os.system('python covid19plot.py -perCapita -log -dark  -out top_30 -top 21 30 -title "Top 21-30"')
+os.system('python covid19plot.py -perCapita -log -dark -deaths -out Top_10_deaths -top 1 10 -yFrom 1e-3 -yTo 1e1 -title "Top 10 - Countries with most deaths"')
+os.system('python covid19plot.py -perCapita -log -dark  -out Top_10_Countries_Cases -top 1 10 -yFrom 1e-3 -yTo 1e2 -title "Top 10 - Countries with most cases"')
 
-os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_40_deaths -top 31 40 -title "Top 31-40"')
-os.system('python covid19plot.py -perCapita -log -dark  -out top_40 -top 31 40 -title "Top 31-40"')
+os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_20_deaths -top 11 20 -yFrom 1e-3 -yTo 1e1 -title "Top 11-20 - Countries with most deaths"')
+os.system('python covid19plot.py -perCapita -log -dark  -out top_20 -top 11 20 -yFrom 1e-3 -yTo 1e2 -title "Top 11-20 - Countries with most cases"')
 
-os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_50_deaths -top 41 50 -title "Top 41-50"')
-os.system('python covid19plot.py -perCapita -log -dark  -out top_50 -top 41 50 -title "Top 41-50"')
+os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_30_deaths -top 21 30 -yFrom 1e-3 -yTo 1e1 -title "Top 21-30 - Countries with most deaths"')
+os.system('python covid19plot.py -perCapita -log -dark  -out top_30 -top 21 30 -yFrom 1e-3 -yTo 1e2 -title "Top 21-30 - Countries with most cases"')
 
-os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_60_deaths -top 51 60 -title "Top 51-60"')
-os.system('python covid19plot.py -perCapita -log -dark  -out top_60 -top 51 60 -title "Top 51-60"')
+os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_40_deaths -top 31 40 -yFrom 1e-3 -yTo 1e1 -title "Top 31-40 - Countries with most deaths"')
+os.system('python covid19plot.py -perCapita -log -dark  -out top_40 -top 31 40 -yFrom 1e-3 -yTo 1e2 -title "Top 31-40 - Countries with most cases"')
+
+os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_50_deaths -top 41 50 -yFrom 1e-3 -yTo 1e1 -title "Top 41-50 - Countries with most deaths"')
+os.system('python covid19plot.py -perCapita -log -dark  -out top_50 -top 41 50 -yFrom 1e-3 -yTo 1e2 -title "Top 41-50 - Countries with most cases"')
+
+os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_60_deaths -top 51 60 -yFrom 1e-3 -yTo 1e1 -title "Top 51-60 - Countries with most deaths"')
+os.system('python covid19plot.py -perCapita -log -dark  -out top_60 -top 51 60 -yFrom 1e-3 -yTo 1e2 -title "Top 51-60 - Countries with most cases"')
+
+os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_70_deaths -top 61 70 -yFrom 1e-3 -yTo 1e1 -title "Top 61-70 - Countries with most deaths"')
+os.system('python covid19plot.py -perCapita -log -dark  -out top_70 -top 61 70 -yFrom 1e-3 -yTo 1e2 -title "Top 61-70 - Countries with most cases"')
+
+os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_80_deaths -top 71 80 -yFrom 1e-3 -yTo 1e1 -title "Top 71-80 - Countries with most deaths"')
+os.system('python covid19plot.py -perCapita -log -dark  -out top_80 -top 71 80 -yFrom 1e-3 -yTo 1e2 -title "Top 71-80 - Countries with most cases"')
+
+os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_90_deaths -top 81 90 -yFrom 1e-3 -yTo 1e1 -title "Top 81-90 - Countries with most deaths"')
+os.system('python covid19plot.py -perCapita -log -dark  -out top_90 -top 81 90 -yFrom 1e-3 -yTo 1e2 -title "Top 81-90 - Countries with most cases"')
+
+os.system('python covid19plot.py -perCapita -log -dark -deaths -out top_100_deaths -top 91 100 -yFrom 1e-3 -yTo 1e1 -title "Top 91-100 - Countries with most deaths"')
+os.system('python covid19plot.py -perCapita -log -dark  -out top_100 -top 91 100 -yFrom 1e-3 -yTo 1e2 -title "Top 91-100 - Countries with most cases"')
 
 os.system('python covid19plot.py -perCapita -log -dark -deaths -out special_1_deaths US UK IR KR IT')
 os.system('python covid19plot.py -perCapita -log -dark -out special_1_count US UK IR KR IT')
