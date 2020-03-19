@@ -1,5 +1,11 @@
 import os
 
+os.system('python covid19plot.py -perCapita -log -dark -deaths -out Asia_deaths -yFrom 1e-3 -yTo 1e1 -title "Asia deaths" CN KR JP TW TH VN KH SG')
+os.system('python covid19plot.py -perCapita -log -dark  -out Asia_Cases -yFrom 1e-3 -yTo 1e2 -title "Asia cases" CN KR JP TW TH VN KH SG')
+
+os.system('python covid19plot.py -perCapita -log -dark -deaths -out WestEurope_deaths -yFrom 1e-3 -yTo 1e1 -title "Europe deaths" IE UK NO SE FI DK NL BE DE CH AT ES FR IT')
+os.system('python covid19plot.py -perCapita -log -dark  -out WestEurope_Cases -yFrom 1e-3 -yTo 1e2 -title "Europe cases" IE UK NO SE FI DK NL BE DE CH AT ES FR IT')
+
 
 os.system('python covid19plot.py -perCapita -log -dark -deaths -out Top_10_deaths -top 1 10 -yFrom 1e-3 -yTo 1e1 -title "Top 10 - Countries with most deaths"')
 os.system('python covid19plot.py -perCapita -log -dark  -out Top_10_Countries_Cases -top 1 10 -yFrom 1e-3 -yTo 1e2 -title "Top 10 - Countries with most cases"')

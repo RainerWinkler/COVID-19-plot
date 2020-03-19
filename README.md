@@ -59,6 +59,16 @@ Cases on Diamond Princess are not shown (Singular event)
 ![example](../../raw/master/top_100.png)
 ![example](../../raw/master/top_100_deaths.png)
 
+## Some countries in Asia
+
+![example](../../raw/master/Asia_Cases.png)
+![example](../../raw/master/Asia_deaths.png)
+
+## Some countries in Europe
+
+![example](../../raw/master/WestEurope_Cases.png)
+![example](../../raw/master/WestEurope_deaths.png)
+
 ## Further examples
 
 ![example](../../raw/master/special_1_count.png)
