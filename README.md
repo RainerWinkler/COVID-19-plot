@@ -96,7 +96,7 @@ To save to file without displaying a plot add -dark for instance `python covid19
 
 To display per 100,000 inhabitants add -perCapita
 
-To display tops add -to from to. Countries are ignored. San Marino and Diamond Princes have very many values and are suppressed
+To display tops add -top from to. Countries are ignored. San Marino and Diamond Princes have very many values and are suppressed. Example: `python covid19plot.py -top 1 10`
 
 To set the minimal and maximal values for the y axis use -yFrom <low value> -yTo <high value>: for instance: "-yFrom 1e-2 -yTo 1e3"
 
