@@ -1,7 +1,7 @@
 import os
 
-os.system('python covid19plot.py -perCapita -log -dark -deaths -out Asia_deaths -yFrom 1e-3 -yTo 1e2 -title "Asia deaths" CN KR JP TW TH VN KH SG')
-os.system('python covid19plot.py -perCapita -log -dark  -out Asia_Cases -yFrom 1e-3 -yTo 1e3 -title "Asia cases" CN KR JP TW TH VN KH SG')
+os.system('python covid19plot.py -perCapita -log -dark -deaths -out Asia_deaths -yFrom 1e-3 -yTo 1e2 -title "Asia deaths" CN KR JP TW TH VN KH SG MN')
+os.system('python covid19plot.py -perCapita -log -dark  -out Asia_Cases -yFrom 1e-3 -yTo 1e3 -title "Asia cases" CN KR JP TW TH VN KH SG MN')
 
 os.system('python covid19plot.py -perCapita -log -dark -deaths -out WestEurope_deaths -yFrom 1e-3 -yTo 1e2 -title "Europe deaths" IE UK NO SE FI DK NL BE DE CH AT ES FR IT')
 os.system('python covid19plot.py -perCapita -log -dark  -out WestEurope_Cases -yFrom 1e-3 -yTo 1e3 -title "Europe cases" IE UK NO SE FI DK NL BE DE CH AT ES FR IT')
