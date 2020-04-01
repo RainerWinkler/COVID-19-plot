@@ -199,7 +199,7 @@ plt.legend(legendText)
 if perCapita == "":
     plt.ylabel("Number of confirmed " + column_text)
 else:
-    plt.ylabel("Number of confirmed " + column_text + "per 100,000 inhabitants" )
+    plt.ylabel("Number of confirmed " + column_text + " per 100,000 inhabitants" )
 if perCapita == "":
     plt.title("Confirmed " + column_text + " per country as of " + str(end_date))
     if supTitle != "":
