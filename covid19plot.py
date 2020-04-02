@@ -34,6 +34,7 @@ topToFound = ""
 supTitle = ""
 yFrom = ""
 yTo = ""
+dataFile = ""
 # Evaluate arguments
 arguments = sys.argv[1:]
 for arg in arguments:
@@ -59,9 +60,13 @@ for arg in arguments:
         yFrom = "xxx"
     elif ( arg == "-yTo" ):
         yTo = "xxx"
+    elif ( arg == "-dataFile" ):
+        dataFile = "xxx"
     else:
         if filename == "xxx":
             filename = arg
+        elif dataFile == "xxx":
+            dataFile = arg
         elif supTitle == "xxx":
             supTitle = arg
         elif format == "xxx":
@@ -84,29 +89,34 @@ for arg in arguments:
 
 
 #url = "https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases"
-url = "https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide"
 
-page = requests.get(url)
-soup = BeautifulSoup(page.text, "html.parser")
+if dataFile == "" :
+    
+    url = "https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide"
+    
+    page = requests.get(url)
+    soup = BeautifulSoup(page.text, "html.parser")
 # Changed method to find Excel file URL
-xls_url = ""
-for link in soup.find_all('a'):
-    url2 = link.get('href')
-    #print(url2)
-    if type(url2) == str:
-        position = url2.find(".xls")
-        #print(str(position))
-        if url2.find(".xls") != -1:
-            if xls_url == "":
-                xls_url = url2
-                #print("found" + xls_url)
-#print(xls_url)
-#xls_link_box = soup.find(text="Download today's data: Geographic distribution of COVID-19 cases worldwide - XLS file")
-#xls_link_box = soup.find(text="ct__link")
-#xls_url = xls_link_box.parent["href"]
+    xls_url = ""
+    for link in soup.find_all('a'):
+        url2 = link.get('href')
+        #print(url2)
+        if type(url2) == str:
+            position = url2.find(".xls")
+            #print(str(position))
+            if url2.find(".xls") != -1:
+                if xls_url == "":
+                    xls_url = url2
+                    #print("found" + xls_url)
+    #print(xls_url)
+    #xls_link_box = soup.find(text="Download today's data: Geographic distribution of COVID-19 cases worldwide - XLS file")
+    #xls_link_box = soup.find(text="ct__link")
+    #xls_url = xls_link_box.parent["href"]
+    dataFile = 'covid_count.xls'
+
+    urllib.request.urlretrieve(xls_url, './' + dataFile)
 
 
-urllib.request.urlretrieve(xls_url, './covid_count.xls')
 wb_obj = xlrd.open_workbook('./covid_count.xls') 
 xl_sheet = wb_obj.sheet_by_index(0)
 
