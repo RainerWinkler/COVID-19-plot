@@ -100,4 +100,4 @@ To display tops add -top from to. Countries are ignored. San Marino and Diamond 
 
 To set the minimal and maximal values for the y axis use -yFrom <low value> -yTo <high value>: for instance: "-yFrom 1e-2 -yTo 1e3"
 
-To read from a local csv use parameter -dataFile <Name of Excel>, for instance "python covid19plot.py -dataFile region_covid_count.xls  FR DE AT"
+To read from a local Excel file use parameter -dataFile <Name of Excel>, for instance "python covid19plot.py -dataFile region_covid_count.xls  FR DE AT"
