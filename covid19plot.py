@@ -117,7 +117,7 @@ if dataFile == "" :
     urllib.request.urlretrieve(xls_url, './' + dataFile)
 
 
-wb_obj = xlrd.open_workbook('./covid_count.xls') 
+wb_obj = xlrd.open_workbook('./' + dataFile) 
 xl_sheet = wb_obj.sheet_by_index(0)
 
 population = dict()
