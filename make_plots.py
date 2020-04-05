@@ -15,11 +15,11 @@ os.system('python covid19plot.py -perCapita -log -dark  -out NoMasks_Cases -yFro
 os.system('python covid19plot.py -dataFile region_covid_count.xls -perCapita -log -dark  -out Alberta_Cases -yFrom 1e-3 -yTo 1e3 -title "Alberta cases" CA-AB')
 os.system('python covid19plot.py -dataFile region_covid_count.xls -perCapita -log -dark -deaths -out Alberta_deaths -yFrom 1e-3 -yTo 1e2 -title "Alberta deaths" CA-AB')
 
-os.system('python covid19plot.py -perCapita -dark -deaths -out Asia_deaths_lin -yFrom 0 -yTo 25 -title "Asia deaths" CN KR JP TW TH VN KH SG MN')
-os.system('python covid19plot.py -perCapita -dark  -out Asia_Cases_lin -yFrom 0 -yTo 250 -title "Asia cases" CN KR JP TW TH VN KH SG MN')
+os.system('python covid19plot.py -perCapita -dark -deaths -out Asia_deaths_lin -yFrom 0 -yTo 25 -title "Masks deaths" CN KR JP TW TH VN KH MN')
+os.system('python covid19plot.py -perCapita -dark  -out Asia_Cases_lin -yFrom 0 -yTo 250 -title "Masks cases" CN KR JP TW TH VN KH MN')
 
-os.system('python covid19plot.py -perCapita -dark -deaths -out WestEurope_deaths_lin -yFrom 0 -yTo 25 -title "Europe deaths" IE UK NO SE FI DK NL BE DE CH AT ES FR IT')
-os.system('python covid19plot.py -perCapita -dark  -out WestEurope_Cases_lin -yFrom 0 -yTo 250 -title "Europe cases" IE UK NO SE FI DK NL BE DE CH AT ES FR IT')
+os.system('python covid19plot.py -perCapita -dark -deaths -out WestEurope_deaths_lin -yFrom 0 -yTo 25 -title "No masks deaths" IE UK NO SE FI DK NL BE DE CH AT ES FR IT SG')
+os.system('python covid19plot.py -perCapita -dark  -out WestEurope_Cases_lin -yFrom 0 -yTo 250 -title "No masks cases" IE UK NO SE FI DK NL BE DE CH AT ES FR IT SG')
 
 
 
